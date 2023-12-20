@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Text Utilizer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+<body>
+    <h1 class='text-center text-4xl bg-slate-400 mx-6 h-12 p-1 rounded-lg mt-10'>Welcome to the text analyazer,Enter your text below</h1>
+    <form action='/Analyze_text/' method='post'>
+    {% csrf_token %}
+    <textarea class='border-2 border-black mt-4 w-[97%] h-44 mx-6 '  placeholder='Write something else' name='text'></textarea><br>
+    <p class='mx-4 mt-6 float-left'><input type='checkbox' class='mr-2' name='punc'>Remove punchuations.</p>
+    <p class='mx-4 mt-6 float-left'><input type='checkbox' class='mr-2' name='capital'>Capitalize text.</p>
+    <p class='mx-4 mt-6 float-left'><input type='checkbox' class='mr-2' name='count'>Count number of charactor.</p>
+    <p class='mx-4 mt-6 float-left'><input type='checkbox' class='mr-2' name='removeline'>Remove new line.</p>  
+    <button type='submit' class='bg-blue-400 mt-8 w-24 text-2xl h-16 rounded-lg w-44 mx-[45%]'>Analyze Text</button>
+</body>
+</html>
